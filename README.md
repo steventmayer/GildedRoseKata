@@ -1,0 +1,2 @@
+# GildedRoseKata
+Kata for GildedRose
