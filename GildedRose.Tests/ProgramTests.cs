@@ -208,7 +208,7 @@ namespace GildedRose.Tests
                 {
                     new Item
                     {
-                        Name = "Conjured",
+                        Name = "Conjured Mana Cake",
                         SellIn = 3,
                         Quality = 20
                     }
@@ -230,7 +230,7 @@ namespace GildedRose.Tests
                 {
                     new Item
                     {
-                        Name = "Conjured",
+                        Name = "Conjured Mana Cake",
                         SellIn = -3,
                         Quality = 20
                     }

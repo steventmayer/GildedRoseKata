@@ -9,7 +9,12 @@ namespace GildedRose.Factory
     {
         public static Product Create(Item item)
         {
-            switch(item?.Name)
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            switch(item.Name)
             {
                 case "Sulfuras, Hand of Ragnaros":
                     return new Product(
@@ -29,7 +34,7 @@ namespace GildedRose.Factory
                         new IncreaseQualityBehavior(),
                         new SellInBehavior(),
                         new BackstagePassPostSellInBehavior());
-                case "Conjured":
+                case string name when name.Contains("Conjured"):
                     return new Product(
                         item,
                         new DecreaseQualityTwiceAsFastQualityBehavior(),
